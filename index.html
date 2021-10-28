@@ -10,6 +10,43 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
+    <body class="flex-column min-100-vh">
+        <header class="hero">
+            <h1 class="app-title text-center">Weather Dashboard</h1>
+        </header>
+    
+        <main class="row justify-space-between">
+            <div class="col-12 col-md-3">
+                <div class="card">
+                    <h3 class="card-header">Search for a City:</h3>
+                    <form id="user-form" class="card-body">
+                        <input name="city" id="city" type="text" placeholder="Search City" autofocus="true" class="form-input" />
+                        <div></div>
+                        <button type="submit" class="btn btn-dark">Search</button>
+                    </form>
+                </div>
+    
+                <hr>
+    
+                <div class="card">
+                    <div id="city-buttons" class="card-body">
+                    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-12 col-md-9">
+                <div class="card">
+                    <h3 id="city-info" class="card-header"></h3>
+                    <div id="city-temp">Temp: </div>
+                    <div id="city-wind">Wind: </div>
+                    <div id="city-humid">Humidity: </div>
+                    <div id="city-uvi">UV Index:</div>
+                </div>
+            </div>
+        </main>
+    
+    
     
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
