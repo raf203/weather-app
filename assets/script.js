@@ -186,9 +186,10 @@ function addCityButton(city) {
     displayCityButtons();
 };
 
+
 function displayCityButtons() {
     var cityButtonsEl = $("#city-buttons");
-    cityButtonsEl.html(""); // Remove any existing buttons
+    cityButtonsEl.html(""); 
 
     for (var i = 0; i < cities.length; i++) {
         var newButton = $("<button>");
@@ -200,3 +201,25 @@ function displayCityButtons() {
         cityButtonsEl.append(newButton);
     }
 };
+
+$("#user-form").on("submit", function (event) {
+    event.preventDefault();
+
+    var cityEl = $("#city");
+    var city = cityEl.val().trim();
+    cityEl.val(""); // Clear out city information
+    if (city) {
+        apiLatLon(city);
+    } else {
+        alert("Enter a city name.");
+    }
+});
+
+$("#city-buttons").on("click", function (event) {
+    var city = $(event.target).attr("data-city");
+    if (city) {
+        apiLatLon(city);
+    }
+});
+
+
