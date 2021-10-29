@@ -1,5 +1,10 @@
+// Variables 
+var cities = [];
+
+loadCities();
+
+// Get location of the city
 function apiLatLon(city) {
-    // Use this call to get the latitude and longitude of the city.  This is required by the one call api.
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=1353e67f03e4a02c4d6d35efc4c2e994&units=imperial";
 
     fetch(apiUrl)
@@ -39,9 +44,8 @@ function apiGetData(city, lat, lon) {
         });
 };
 
+// Display date
 function displayDate(date) {
-    // The date provided by the API is # of seconds since epoch
-    // We need # of microseconds and to format it properly
     return moment(date * 1000).format("M/D/YY")
 };
 
@@ -52,7 +56,7 @@ function displayContainerData(city, data) {
     var cityCardEl = $("<div>");
     cityCardEl.addClass("dark");
 
-    // Display city header info (city name, date, weather icon)
+// Display city header info (city name, date, weather icon)
     var cityInfoEl = $("<h3>");
     cityInfoEl.attr("id", "city-info");
     cityInfoEl.addClass("card-header");
@@ -120,7 +124,7 @@ function formatCityData(city, data) {
 
     // Display 5-day forecast
     var forecastEl = $("#forecast");
-    forecastEl.html(""); // Clear out the old info
+    forecastEl.html(""); 
     if (!forecastEl.hasClass("row")) {
         forecastEl.addClass("row");
     }
@@ -172,10 +176,10 @@ function getIconLocation(icon, size) {
     return "http://openweathermap.org/img/wn/" + icon + size + ".png";
 };
 
+// Add button of latest cities
 function addCityButton(city) {
-    // If city not found in array
     if (cities.indexOf(city) === -1) {
-        cities.unshift(city); // Add it at beginning
+        cities.unshift(city); 
     }
 
     saveCities();
