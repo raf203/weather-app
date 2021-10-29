@@ -171,3 +171,28 @@ function getIconLocation(icon, size) {
 
     return "http://openweathermap.org/img/wn/" + icon + size + ".png";
 };
+
+function addCityButton(city) {
+    // If city not found in array
+    if (cities.indexOf(city) === -1) {
+        cities.unshift(city); // Add it at beginning
+    }
+
+    saveCities();
+    displayCityButtons();
+};
+
+function displayCityButtons() {
+    var cityButtonsEl = $("#city-buttons");
+    cityButtonsEl.html(""); // Remove any existing buttons
+
+    for (var i = 0; i < cities.length; i++) {
+        var newButton = $("<button>");
+        newButton.html(cities[i]);
+        newButton.attr("data-city", cities[i]);
+        newButton.addClass("btn");
+        newButton.addClass("dark");
+
+        cityButtonsEl.append(newButton);
+    }
+};
