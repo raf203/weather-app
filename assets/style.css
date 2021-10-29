@@ -1,0 +1,27 @@
+
+h1 {
+    background-color: #efeeee;
+    color: #c4bdac;
+}
+
+h2 {
+  font-size: large;
+}
+
+.bg-danger,
+.bg-success {
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  margin: 5px;
+}
+
+.dark {
+  color: white;
+  background-color: #d3c4be;
+  justify-content: right;
+}
