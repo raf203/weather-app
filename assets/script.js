@@ -222,4 +222,17 @@ $("#city-buttons").on("click", function (event) {
     }
 });
 
+function saveCities() {
+    localStorage.setItem("cities", JSON.stringify(cities));
+}
+
+function loadCities() {
+    cities = JSON.parse(localStorage.getItem("cities"));
+    if (!cities) {
+        cities = [];
+    }
+
+    displayCityButtons();
+}
+
 

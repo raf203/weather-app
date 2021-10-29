@@ -25,3 +25,30 @@ h2 {
   background-color: #d3c4be;
   justify-content: right;
 }
+
+.form-input {
+  width: 100%;
+}
+
+.shrink {
+  font-size: 15px;
+  padding: 5px;
+}
+
+.shrink-icon {
+  height: 50px;
+  width: 50px;
+  
+}
+
+.background {
+    background-color: #efeeee;
+    
+}
+
+#city-temp,
+#city-wind,
+#city-humid,
+#city-uvi {
+    padding: 10px;
+    } 
