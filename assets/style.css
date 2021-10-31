@@ -1,54 +1,55 @@
 
 h1 {
-    background-color: #efeeee;
-    color: #c4bdac;
+  background-color: #efeeee;
+  color: #c4bdac;
 }
 
 h2 {
-  font-size: large;
+font-size: large;
 }
 
 .bg-danger,
-.bg-success {
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
+.bg-success,
+.bg-warning {
+color: white;
+padding: 5px;
+border-radius: 5px;
 }
 
 .btn {
-  width: 100%;
-  margin: 5px;
+width: 100%;
+margin: 5px;
 }
 
 .dark {
-  color: white;
-  background-color: #d3c4be;
-  justify-content: right;
+color: white;
+background-color: #d3c4be;
+justify-content: right;
 }
 
 .form-input {
-  width: 100%;
+width: 100%;
 }
 
 .shrink {
-  font-size: 15px;
-  padding: 5px;
+font-size: 15px;
+padding: 5px;
 }
 
 .shrink-icon {
-  height: 50px;
-  width: 50px;
-  
+height: 50px;
+width: 50px;
+
 }
 
 .background {
-    background-color: #efeeee;
-    
+  background-color: #efeeee;
+  
 }
 
 #city-temp,
 #city-wind,
 #city-humid,
 #city-uvi {
-    padding: 10px;
-    } 
+  padding: 10px;    
+} 
